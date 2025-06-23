@@ -1,0 +1,1613 @@
+@import url(../css/reset.css);
+
+
+/* 設計系統 */
+:root {
+    --base-line-height: 1.6;
+    --font-main: "Noto Sans TC", sans-serif;
+
+    --h1-font-size: 96px;
+    --h1-color: #ffffff;
+    --h1-text-stroke: 1px black;
+    --h1-line-height: 160%;
+    
+
+    --h2-font-size: 40px;
+    --h2-line-height: 100%;
+  
+    --h3-font-size: 36px;
+    --h3-line-height: 120%;
+    --h3-font-weight: 600;
+
+    --h4-font-size: 32px;
+    --h4-line-height: 120%;
+  
+    --h5-font-size: 24px;
+    --h5-line-height: 120%;
+
+    --p-font-size: 16px;
+    --p-line-height: 150%;
+}
+
+body{
+    line-height: var(--base-line-height);
+    font-family: var(--font-main);
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    color: var(--h1-color);
+    -webkit-text-stroke: var(--h1-text-stroke);
+    line-height: var(--h1-line-height);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-line-height);
+} 
+
+h3{
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    font-weight: var(--h3-font-weight)
+}
+
+h4{
+    font-size: var(--h4-font-size);
+    line-height: var(--h4-line-height);
+}
+
+h5{
+    font-size: var(--h5-font-size);
+    line-height: var(--h5-line-height);
+}
+
+p{
+    font-size: var(--p-font-size);
+    line-height: var(--p-line-height);
+}
+
+/* 設計系統結束 */
+
+body{}
+
+.wrapper{
+    width: 1200px;
+    background-color: #fff;
+    margin: 0 auto;
+    overflow: hidden;
+
+    box-shadow: 1px 1px 20px  rgba(42, 42, 42, 0.2);
+}
+
+/* header開始 */
+header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #2A2A2A;
+
+}
+
+header a{
+    height: 3rem;
+    margin-left: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+
+
+}
+
+nav ul{
+    display: flex;
+    
+}
+
+nav li{}
+
+nav a{
+    text-decoration: none;
+    color: #2A2A2A;
+
+    position: relative;
+}
+
+nav a:hover{
+    text-shadow: 5px 10px 10px #2A2A2A;
+}
+
+nav a::before{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 10px;
+    border-left: 1px solid #7f7f7f;
+
+    position: absolute;
+    top: 0;
+    right: -10px;
+    bottom: 0;
+
+    margin: auto;
+}
+
+ nav li:last-child a::before{
+    display: none;
+ } 
+
+nav li:last-child{
+    position: relative;
+}
+
+
+/* 子選單 */
+.submenu{
+    position: absolute;
+    display:block;
+    background-color: #fff;
+    border: 1px solid #2A2A2A;
+    font-size: 14px;
+    right: 0;
+
+    z-index: 1;
+}
+
+ul li .submenu{
+    display: none;
+}
+
+
+.submenu li{
+    text-align: center;
+    line-height: 2rem;
+    width: 60px;
+    margin: 5px;
+}
+
+.submenu a{
+ margin: auto 0;
+ text-shadow: none;
+}
+
+/* hover */
+ul li:hover ul{
+    display: block;
+}
+
+.submenu a:hover{
+ text-shadow: 0 3px 10px #2A2A2A;
+}
+
+/* header結束 */
+
+/* banner開始 */
+.banner{
+    background-image: url(../img/1.homepage/01.banner_bg.png);
+    border-bottom: 1px solid #2A2A2A;
+    height: 600px;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.banner h2{
+    position: absolute;
+
+    top: 140px;
+    left: 140px;
+    opacity:0;
+
+    animation-name:welcome;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes welcome{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.banner h1{
+    position: absolute;
+
+    top: 170px;
+    left: 220px;
+
+    opacity:0;
+
+    animation-name:Dwalk;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s ;
+}
+
+@keyframes Dwalk{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.banner h2+h1+img{
+    position: absolute;
+
+    top: 140px;
+    left: 640px;
+}
+
+.orange{
+    position: absolute;
+    border-right: 1px solid #000;
+
+    bottom: 220px;
+    right: 220px;
+
+    visibility: hidden;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    animation-name:orange-say;
+    animation-duration: 3s;
+    animation-fill-mode: none;
+    animation-delay: 2s ;
+    animation-timing-function:steps(19);
+    width: 0ch;
+}
+
+@keyframes orange-say{
+    0%{
+        width:0;
+        visibility: visible;
+    }
+    90%{
+        width: 19ch;
+        visibility: visible;
+    }
+    100%{
+        width: 19ch;
+        visibility: visible;
+    }
+}
+
+
+.yellow{
+    position: absolute;
+    border-right: 1px solid #000;
+
+    bottom: 90px;
+    right: 500px;
+
+    visibility: hidden;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    animation-name:yellow-say;
+    animation-duration: 3s;
+    animation-fill-mode: none;
+    animation-delay: 5s ;
+    animation-timing-function:steps(25);
+    width: 0ch;
+}
+
+@keyframes yellow-say{
+    0%{
+        width:0;
+        visibility: visible;
+    }
+    90%{
+        width: 25ch;
+        visibility: visible;
+    }
+    100%{
+        width: 25ch;
+        visibility: visible;
+    }
+}
+
+.banner p+p+img{
+    position: absolute;
+
+    top: 320px;
+    left: 520px;
+
+    opacity:0;
+
+    animation-name:god-say-image;
+    animation-duration: 1s;
+    animation-fill-mode: none;
+    animation-delay: 8.2s ;
+}
+
+@keyframes god-say-image{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.banner p+img+img{
+    position: absolute;
+
+    top: 320px;
+    left: 250px;
+
+    opacity:0;
+
+    animation-name:god-image;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 9.2s ;
+}
+
+@keyframes god-image{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.god1{
+    position: absolute;
+    border-right: 1px solid #000;
+
+    bottom: 190px;
+    left: 480px;
+
+    visibility: hidden;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    animation-name:god-say;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 10s;
+    animation-timing-function:steps(40);
+    width: 0ch;
+}
+
+
+@keyframes god-say{
+    0%{
+        width: 0ch;
+        visibility: visible;
+    }
+    90%{
+        width: 40ch;
+        visibility: visible;
+    }
+    100%{
+        width: 40ch;
+        visibility: visible;
+    }
+}
+
+/* banner結束 */
+
+/* 最新消息開始 */
+
+.news-section{}
+
+.news-section h3{
+    height: 108px;
+    text-align: center;
+    line-height: 108px;
+    background-color: #2A2A2A;
+    color: #fff;
+    margin-bottom: 28px;
+}
+
+.news{
+    display: flex;
+    justify-content:space-between;
+    width: 950px;
+    margin: 0 auto;
+}
+
+.news article{
+    flex-direction: column;
+    width: 284px;
+    height: 588px;
+    border: 1px solid #2A2A2A;
+    overflow: hidden;
+
+}
+
+.news img{
+    height: 373px;
+    margin-bottom: 12px;
+    object-fit: none;
+    
+
+}
+
+.news h5{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin: 0 12px;
+    
+}
+
+.news p{
+    height: 71px;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 28px 12px;
+}
+
+.news a{
+    margin: 28px 12px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2A2A2A;
+    border-radius: 50px;
+}
+
+/* 最新消息結束 */
+
+/* 今日聖地推薦 */
+
+.osusume-section{
+    
+}
+
+.osusume-section h3{
+    height: 108px;
+    text-align: center;
+    line-height: 108px;
+    background-color: #2A2A2A;
+    color: #fff;
+    margin: 28px auto;
+}
+
+.osusume article{
+    position: relative;
+    height: 500px;
+    width: 950px;
+    margin: 0 auto;
+
+    /* border: 1px solid black; */
+}
+
+.osusume .part1{
+    width: 300px;
+    margin-left: 8px;
+}
+
+.osusume img{
+    position: absolute;
+    width: 270px;
+    height: 100%;
+    object-fit: none;
+    border-radius: 20px;
+
+    top: 0;
+    right: 360px;
+}
+
+.osusume .video{
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+
+    top: 0;
+    right: 80px;
+}
+
+.osusume .part2{
+    position: absolute;
+    width: 320px;
+
+    top: 270px;
+    right: 10px;
+}
+
+.osusume a{
+    display: inline-block;
+    margin: 250px 0 0 90px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+
+/* osusume結束 */
+
+/* 跑馬燈 */
+
+.marquee{
+    height: 80px;
+    margin: 28px 0;
+    position: relative;
+
+    border: #000;
+}
+
+.marquee h2{
+    position: absolute;
+    line-height: 80px;
+    
+    overflow: hidden;
+    white-space: nowrap;
+
+    animation-name:see;
+    animation-duration: 10s;
+    animation-fill-mode: none;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+
+    right: -910px;
+
+}
+
+@keyframes see{
+    0%{
+        right: -910px;;
+    }
+    100%{
+        right: 1220px;
+    }
+}
+
+/* 跑馬燈結束 */
+
+/* 留言牆 */
+
+.card-sec{
+    height: 372px;
+}
+
+.card-art{
+    display: flex;
+    margin-bottom: 28px;
+}
+
+.card{
+    width: 344px;
+    height: 216px;
+    flex-shrink: 0;
+    /* border: 1px solid #000; */
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25) ;
+
+    margin: 0 16px;
+    padding: 12px;
+}
+
+.card .card-header{
+    border-bottom: 1px solid #c9c9c9;
+    height: 37px;
+}
+
+.card .name{}
+
+.card .doko{}
+
+.card .location{}
+
+.card .card-meta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+
+    margin-bottom: 8px;
+}
+
+.hori{
+    margin-left: 16px;
+}
+
+.card-sec+svg{
+    margin-left: 16px;
+}
+
+/* 留言牆結束 */
+
+/* footer */
+
+footer{
+    border-top: 1px solid #2A2A2A;
+}
+
+footer .footer-font{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.footer-font p{}
+
+.footer-font a{
+    margin: 0 8px;
+    text-decoration: none;
+    color: #000000;
+
+    position: relative;
+}
+
+.footer-font a::before{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    border-left: 1px solid #000000;
+
+    position: absolute;
+    top: 3px;
+    bottom: 0;
+    right: -10px;
+    margin:auto;
+}
+
+.footer-font a:last-child::before{
+    display: none;
+}
+
+
+/* --------------第二頁的內容-------------- */
+
+.banner-p2{
+    background-color: #fff;
+    height: 600px;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.banner-p2 .first-sent{
+    position: absolute;
+
+    top: 270px;
+    left: 80px;
+
+
+    animation-name:map;
+    animation-duration: 2s;
+    animation-fill-mode: none;
+    /* animation-timing-function: linear; */
+}
+
+@keyframes map{
+    0%{
+        top: -70px;
+        left: 80px;
+    }
+
+    10%{
+        top: 270px;
+        left: 80px;
+    }
+
+    50%{
+        top: 230px;
+        left: 80px;
+    }
+
+    /* 70%{
+        top: 270px;
+        left: 80px;
+    }
+
+    90%{
+        top: 250px;
+        left: 80px;
+    } */
+
+    100%{
+        top: 270px;
+        left: 80px;
+    }
+}
+
+.banner-p2 .second-sent{
+    position: absolute;
+
+    top: 320px;
+    left: 90px;
+
+    font-weight: normal;
+    
+    animation-name:slogan;
+    animation-duration: 5s;
+    animation-fill-mode: none;
+}
+
+@keyframes slogan{
+    0%{
+        transform:rotate(0);
+    }
+
+    10%{
+        transform:rotate(-20deg);
+    }
+
+    11%{
+        transform:rotate(-10deg);
+    }
+
+    100%{
+        transform:rotate(0);
+    }
+}
+
+.banner-p2 .girl-top{
+    position: absolute;
+
+    width: 100px;
+
+    top: -130px;
+    left: -670px;
+    transform: rotate(90deg);
+
+    offset-path: path("m1248-137l15 489c0 0 75-105.8 144-106 69-0.2 139.5 66.2 156 93 16.5 26.8 56 495 56 495");
+
+    animation-name:girl-ani;
+    animation-duration: 2s;
+    animation-fill-mode: none;
+    
+}
+
+@keyframes girl-ani{
+    0%{
+        offset-distance: 0%;
+        /* top: -230px;
+        left: 520px;
+        transform: rotate(0); */
+    }
+
+    100%{
+        offset-distance: 100%;
+        
+    }
+}
+
+.banner-p2 .girl-bottom{
+    position: absolute;
+    width: 350px;
+
+    top: 600px;
+    right: 60px;
+
+    animation-name:girl-bottomtotop;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    
+}
+
+@keyframes girl-bottomtotop{
+    0%{
+        top: 600px;
+        right: 60px;
+    }
+
+    100%{
+        top: 50px;
+        right: 60px;
+    }
+}
+
+/* 服務宗旨 */
+
+.purpose{}
+
+.purpose h3{
+    height: 108px;
+    text-align: center;
+    line-height: 108px;
+    background-color: #2A2A2A;
+    color: #fff;
+    margin-bottom: 28px;
+}
+
+.purpose article{
+    display: grid;
+    width: 906px;
+    
+    
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "purpose-1 purpose-2"
+                        "purpose-3 purpose-4";
+    gap: 20px;
+}
+
+.purpose div{
+    border-radius: 20px;
+    border: 1px solid #2A2A2A;
+    padding: 12px 36px;
+    color: #fff;
+
+
+    background-image: url(../img/2.aboutus/02.card_bg.png);
+    
+}
+
+.purpose-1{
+    background-position: 90px 30px;
+    
+}
+
+.purpose-2{
+    background-position: 700px 400px;
+}
+
+.purpose-3{
+    background-position: 200px 300px;
+}
+
+.purpose-4{}
+
+.purpose h5{
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.purpose p{}
+
+/* 服務宗旨結束 */
+
+/* 聯絡我們 */
+
+.contact h3{
+    height: 108px;
+    text-align: center;
+    line-height: 108px;
+    background-color: #2A2A2A;
+    color: #fff;
+    margin: 44px 0 28px 0;
+}
+
+.contact-in{
+    display: flex;
+    width: 60%;
+    /* border: 1px solid blue; */
+    margin: 0 auto;
+    margin-bottom: 28px;
+}
+
+    /* 左邊 */
+.infomation{
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 1;
+    max-width: 50%;
+    gap: 12px;
+}
+
+.infomation div{
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 6px);
+    height: 205px;
+    text-align: center;
+    margin: auto 0;
+    outline: 1px solid rgb(0, 0, 0);
+
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    
+}
+
+.infomation svg{
+    align-items: center;
+    margin: 8px;
+}
+
+.infomation p{
+    word-break: break-all;
+}
+
+
+    /* 右邊 */
+.ques{
+    display: flex;
+    max-width: 50%;
+    margin-left: 20px;
+    width: 100%;
+
+    /* border: 1px solid red; */
+}
+
+.ques form{
+    width: 100%;
+    margin-left: 20px;
+    
+}
+
+.ques div{
+    display: flex;
+    margin-bottom: 12px;
+
+}
+
+.ques label{
+    flex-grow: 1;
+}
+
+.ques input{
+    border-radius: 20px;
+    flex-grow: 10;
+    box-sizing: border-box;
+    padding-left: 8px;
+}
+
+.t-area{
+    height: 200px;
+    resize: none;
+    box-sizing: border-box;
+    padding-bottom: 160px;
+
+}
+
+.ques .submit{
+    display: block;
+    padding: 4px 28px;
+    margin: 48px auto 0;
+    
+}
+
+/* --------------第三頁的內容(最新消息)-------------- */
+
+.page3-new{
+    width: 916px;
+    margin: 0 auto;
+}
+
+
+.beginning{
+    display: inline-block;
+    width: 100%;
+    height: 76px;
+    vertical-align: middle;
+
+    margin: 24px 0 32px;
+}
+
+.beginning h3::after{
+    content: '';
+    display: inline-block;
+    width: calc(100% - 168px);
+    height: 1px;
+    border: 1px solid #000;
+    margin: 8px;
+
+    line-height: 76px;
+    vertical-align: middle;
+}
+
+.beginning .see-more{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.see-more a{
+    text-decoration: none;
+    color: #2A2A2A;
+}
+
+.end{
+    display: flex;
+
+    margin-bottom: 40px;
+}
+
+.mes-left {
+    width: 300px;
+    height: 300px;
+    /* background-image: url(../img/3.news/01.png); */
+    border-radius: 20px;
+    text-decoration: none;
+
+    color: #fff;
+    position: relative;
+    
+    margin-right: 60px;
+
+}
+
+.mes-left::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: brightness(70%);
+    background-image: url(../img/3.news/01.png);
+    border-radius: 20px;
+
+    /* text-shadow: 3px 3px 5px #000; */
+    
+    z-index: 0;
+}
+
+.mes-left h5{
+    font-weight: 600;
+    text-align: center;
+
+    margin: 180px 36px 0;
+
+    position: relative;
+    z-index: 1;
+}
+
+.mes-left p{
+    text-align: center;
+    margin: 0 36px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.mes-right{
+    display: flex;
+
+    flex-shrink: 0;
+    width: 560px;
+
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mes-right .some-news{
+    text-decoration: none;
+    color: #2A2A2A;
+
+
+    display: flex;
+    width: 260px;
+    height: 120px;
+    flex-shrink: 0;
+    
+    box-sizing: border-box;
+    padding: 20px 8px;
+}
+
+.mes-right img{
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+
+    border-radius: 20px;
+}
+
+.mes-right h5 P{}
+
+
+.new-news-center::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: brightness(70%);
+    background-image: url(../img/3.news/06..png);
+    border-radius: 20px;
+    
+    z-index: 0;
+}
+
+.new-news-bottom::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: brightness(70%);
+    background-image: url(../img/3.news/12.png);
+    border-radius: 20px;
+    
+    z-index: 0;
+}
+
+/* --------------第三頁的內容(最新消息)結束-------------- */
+
+
+/* --------------第四頁的內容(推薦景點)-------------- */
+
+
+/* 東方 */
+
+.Touhou-Project, .conan, .suisei, .Lycoris-Recoil{
+    display: flex;
+    height: 800px;
+    justify-content: space-between;
+
+    
+}
+
+.osusume-left{
+    margin: 68px 0 0 54px;
+    width: 720px;
+}
+
+.osusume-left h1{
+    margin-bottom: 24px;
+}
+
+.osusume-left h4{
+    margin-bottom: 52px;
+}
+
+.tourist-spot{
+    display: flex;
+    width: 476px;
+    justify-content: space-between;
+
+    
+}
+
+.tourist-spot-first img, .tourist-spot-second img{
+    border-radius: 20px;
+}
+
+.tourist-spot-first a, .tourist-spot-second a{
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+}
+
+.tourist-spot .tourist-spot-first{}
+
+.osusume-right{
+    /* overflow: hidden; */
+
+    position: relative;
+}
+
+.osusume-right img{
+    display: block;
+    position: absolute;
+    clip-path: polygon(100% 0, 60% 0, 4% 100%, 100% 100%);
+    right: 0px;
+    width: 600px;
+    height: 800px;
+    object-fit: cover; 
+    z-index: 1;
+
+}
+
+.osusume-left > a{
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid black;
+    background-color: #2A2A2A;
+    padding: 8px 16px;
+    text-align: center;
+
+    display: inline-block;
+
+    margin-top: 68px;
+    
+}
+
+.dot{
+    margin: 400px 28px;
+}
+
+.conan, .suisei, .Lycoris-Recoil{
+    display: none;
+}
+
+/* --------------第四頁的內容(推薦景點)結束-------------- */
+
+/* --------------第五頁的內容(說個幾句)-------------- */
+
+.chat{
+    display: flex;
+    justify-content: space-around;
+
+    background-color: #2A2A2A;
+}
+
+.chatbox{
+    width: 346px;
+    height: auto;
+    margin: 24px  0;
+
+    background-color: #fff;
+    border-radius: 10%;
+}
+
+.chat p{
+    height: auto;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.chat a{
+    text-decoration: none;
+    color: #2A2A2A;
+}
+
+.chat-left article:nth-last-child(1){
+    display: none;
+}
+
+.chat-right{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    
+    overflow: hidden;
+}
+
+
+.chat-right .con{
+    margin-top: 24px;
+    height: calc(100% - 48px - 30px);
+    width: 346px;
+    border: none;
+    outline: none;
+
+    border-radius: 5% 5% 0 0;
+
+    box-sizing: border-box;
+    resize: none;
+    padding-bottom: 460px;
+    padding-left: 20px;
+}
+
+
+.chat article:nth-child(4n+1) { 
+    margin-left: 0;
+}
+
+.chat article:nth-child(4n+2) { 
+    margin-left: 128px;
+}
+
+.chat article:nth-child(4n+3) { 
+    margin-left: 32px; 
+}
+
+.chat article:nth-child(4n+4) { 
+    margin-left: 64px;
+}
+
+.btn-svg{
+    position: absolute;
+    display: flex;
+    width: 346px;
+    height: 36px;
+    background-color: #bdbdbd;
+    bottom: 72px;
+
+    justify-content: flex-end;
+    align-items: center;    
+}
+
+.btn-svg svg{
+    margin: 0 8px;
+    text-align: center;
+    
+}
+
+.sub{
+    padding: 8px 10px;
+    border-radius: 10%;
+    margin: 12px 0 24px;
+
+    height: 36px;
+}
+
+/* --------------第五頁的內容(說個幾句)結束-------------- */
+
+/* --------------第六頁的內容(成就系統)-------------- */
+
+.up{
+    display: flex;
+    margin: 80px 86px;
+    justify-content: space-around;
+
+}
+
+.up .gear{
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 600px;
+    
+
+}
+
+.up .opt{
+    width: 30%;
+    margin: 0 8px 8px;
+
+    background-color: #dfdfdf;
+    border-radius: 10px;
+}
+
+.up .opt:hover p:nth-child(1){
+    opacity: 1;
+}
+
+.up .opt p{
+    text-align: center;
+    padding: 0 12px;
+    margin: 4px 0;
+}
+
+.opt p:nth-child(1){
+    opacity: 0;
+}
+
+.up .opt p:nth-child(3){
+    font-weight: 600;
+}
+
+
+.up .opt img{
+    display: block;
+    text-align: center;
+    margin: 0 12px;
+}
+
+.up .doll{
+    position: relative;
+    
+    border:1px solid #000;
+    background-image: url(../img/6.Achieve/grass..png);
+    width: 353px;
+    height: 460px;
+    background-size: cover;
+
+}
+
+.doll img:nth-child(1){
+    position: absolute;
+    top: 60px;
+    left: 110px;
+}
+
+
+
+.doll img:nth-child(1n+2){
+    position: absolute;
+}
+
+.doll img:nth-child(2){
+    top: 30px;
+    left: 140px;
+
+}
+
+
+.doll img:nth-child(3){
+    top: 60px;
+    left: 143px;
+}
+
+.doll img:nth-child(4){
+    top: 86px;
+    left: 167px;
+}
+
+.doll img:nth-child(5){
+    top: 160px;
+    left: 177px;
+}
+
+.doll img:nth-child(6){
+    top: 238px;
+    left: -3px;
+
+    display: none;
+}
+
+.doll img:nth-child(7){
+    top: 242px;
+    left: 207px;
+
+    display: none;
+}
+
+.chieve {
+    background-image: url(../img/6.Achieve/bg.png);
+    background-position: bottom center;
+    background-size: cover;
+    color: white;
+    
+    padding: 80px 86px 20px;
+
+}
+
+.chieve div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.kind a{
+    text-decoration: none;
+    margin: 16px;
+    color: white;
+}
+
+.badgebox{
+    margin: 36px 0 24px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.badgebox .badge{
+    background-color: #fff;
+    width: 124px;
+    height: 124px;
+    border-radius: 64px;
+}
+
+/* --------------第六頁的內容(成就系統)結束-------------- */
+
+/* --------------第六頁的內容(餵個企鵝)-------------- */
+
+main{
+    margin: 55px 55px;
+}
+
+.planarea{}
+
+.planarea h2{
+    margin-bottom: 24px;
+}
+
+.planarea div{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.planarea article{
+    text-align: center;
+    padding: 14px;
+}
+
+.planarea img{
+    border-radius: 20px;
+}
+
+.donate-inf{
+    display: flex;
+    justify-content: space-around;
+}
+
+.donate-inf .donate-inf-le{
+    flex-basis: 412px;
+}
+
+.donate-inf-le .inf{
+    border: 1px solid black;
+    padding: 28px 28px 124px;
+}
+
+.donate-inf-le .result-plan{
+    display: flex;
+}
+
+.donate-inf-le .dollar{
+    display: flex;
+}
+
+.count{
+    margin-top: 36px;
+}
+
+.plan-dollar, .contri, .final{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.contri{
+    margin: 4px 0 24px;
+    border-bottom: 1px solid black;
+}
+
+
+/* 右邊 */
+.donate-inf-ri{
+    display: flex;
+    flex-direction: column;
+    width: 636px;
+}
+
+.donate-inf-ri h5+div{
+    margin: 8px 0;
+    background-color: #dfdfdf;
+}
+
+.donate-inf-ri h5+div+div{
+    margin-bottom: 12px;
+    background-color: #dfdfdf;
+}
+
+.donate-inf-ri label+input{
+    margin-bottom: 12px;
+}
+
+.donate-inf-ri label{
+    font-size: 24px;
+}
+
+.donate-inf-ri input{
+    font-size: 24px;
+}
+
+.donate-inf-ri .cityarea{
+    display: flex;
+}
+
+.cityarea .city{
+    flex: 3;
+}
+
+.cityarea .township{
+    flex: 1;
+    
+}
+
+.donate-inf-ri .cityarea div:nth-child(2){
+    margin-left: 8px;
+}
+
+
+.donate-inf-ri .cityarea div{
+    justify-content: space-between;
+}
+
+.donate-inf-ri .adressarea{
+    display: flex;
+}
+
+.adressarea .road{
+    flex: 3;
+}
+
+.adressarea .zip{
+    flex: 1;
+}
+
+.agree{
+    display: flex;
+}
+
+.agree label{
+    tab-size: 16px;
+}
+
+.submi{
+    width: 280px;
+    background-color: #fff;
+    border: 1px solid red;
+    margin: 12px 0;
+}
