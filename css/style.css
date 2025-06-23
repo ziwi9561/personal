@@ -1470,7 +1470,7 @@ footer .footer-font{
 
 /* --------------第六頁的內容(成就系統)結束-------------- */
 
-/* --------------第六頁的內容(餵個企鵝)-------------- */
+/* --------------第七頁的內容(餵個企鵝)-------------- */
 
 .feed{
     margin: 55px 55px;
@@ -1545,15 +1545,18 @@ footer .footer-font{
 .donate-inf-ri h5+div{
     margin: 8px 0;
     background-color: #dfdfdf;
+    padding: 8px 8px;
 }
 
 .donate-inf-ri h5+div+div{
     margin-bottom: 12px;
     background-color: #dfdfdf;
+    padding: 8px 8px;
 }
 
 .donate-inf-ri label+input{
     margin-bottom: 12px;
+    width: 100%;
 }
 
 .donate-inf-ri label{
@@ -1569,12 +1572,15 @@ footer .footer-font{
 }
 
 .cityarea .city{
-    flex: 3;
+    /* flex: 3; */
+    width: 50%;
+    padding-right: 24px;
 }
 
+
 .cityarea .township{
-    flex: 1;
-    
+    /* flex: 1; */
+    width: 50%;
 }
 
 .donate-inf-ri .cityarea div:nth-child(2){
@@ -1588,14 +1594,21 @@ footer .footer-font{
 
 .donate-inf-ri .adressarea{
     display: flex;
+    
+    
 }
 
 .adressarea .road{
-    flex: 3;
+    /* flex: 3; */
+    box-sizing: border-box;
+    width: 75%;
+    padding-right: 24px;
 }
 
 .adressarea .zip{
-    flex: 1;
+    /* flex: 1; */
+    box-sizing: border-box;
+    width: 25%;
 }
 
 .agree{
@@ -1611,4 +1624,148 @@ footer .footer-font{
     background-color: #fff;
     border: 1px solid red;
     margin: 12px 0;
+    padding: 12px 0;
 }
+
+/* --------------第七頁的內容(餵個企鵝)結束-------------- */
+
+/* --------------第八頁的內容(巡禮熱點文章)-------------- */
+
+.hot{
+    display: flex;
+    margin: 64px 46px;
+}
+
+.art-le{
+    margin-right: 36px;
+}
+
+.art-le h3{
+    position: relative;
+}
+
+.art-le h3::after{
+    content: "";
+    border-top:1px solid black ;
+    width: 620px;
+    height: 1px;
+
+    position: absolute;
+    top: 20px;
+    left: 160px;
+}
+
+.search{
+    border: 2px solid #2A2A2A;
+    margin: 32px 0;
+    border-radius: 20px;
+    padding: 32px 52px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.date .date-data{
+    width: 178px;
+    height: 24px;
+    margin-bottom: 16px;
+}
+
+.key-word{
+    height: 24px;
+}
+
+.btnc{
+    display: flex;
+    flex-direction: column;
+    width: 136px;
+
+    margin: 0 36px;
+    
+}
+
+.btnc button{
+    padding: 8px 40px;
+
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.btnc button:nth-child(1){
+    margin-bottom: 4px;
+}
+
+.art a{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #2A2A2A;
+    margin-bottom: 44px;
+    padding-bottom: 44px;
+
+    text-decoration: none;
+    color: #000;
+
+}
+
+.art img{
+    border-radius: 10px;
+}
+
+
+.art a>div{
+    margin-left: 40px;
+    /* padding-bottom: 22px; */
+}
+
+
+.art div h5{
+    font-weight: 600;
+    color: #001494;
+}
+
+.art p{
+    margin: 12px 0;
+}
+
+.tag{
+    margin: 4px 12px 4px 0;
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    padding: 4px 8px;
+    color: #6b7df3;
+} 
+
+.page{
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #2A2A2A;
+}
+
+.page a{
+    margin: 0 4px;
+}
+
+.page a:nth-child(1), .page a:nth-child(9){
+    margin: 0 24px;
+}
+
+article .atop{
+    text-decoration: none;
+    color: #2A2A2A;
+}
+
+article .top{
+    display: flex;
+    margin: 8px 0;
+    align-items: center;
+}
+
+article .top img{
+    border-radius: 32px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
