@@ -1219,6 +1219,7 @@ footer .footer-font{
 /* --------------第五頁的內容(說個幾句)-------------- */
 
 .chat{
+    width: 100%;
     display: flex;
     justify-content: space-around;
 
@@ -1471,7 +1472,7 @@ footer .footer-font{
 
 /* --------------第六頁的內容(餵個企鵝)-------------- */
 
-main{
+.feed{
     margin: 55px 55px;
 }
 
