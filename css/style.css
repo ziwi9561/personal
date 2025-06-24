@@ -1249,12 +1249,19 @@ footer .footer-font{
 }
 
 .chat p{
-    height: auto;
+    max-height: 32px;
 
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    transition: 0.5s ease;
 }
+
+.chat-left article:hover>p{
+    max-height: 300px;
+    white-space: normal;
+} 
 
 .chat a{
     text-decoration: none;
@@ -1306,6 +1313,7 @@ footer .footer-font{
 .chat article:nth-child(4n+4) { 
     margin-left: 64px;
 }
+
 
 .btn-svg{
     position: absolute;
