@@ -423,7 +423,7 @@ ul li:hover ul{
 .news article{
     flex-direction: column;
     width: 284px;
-    height: 588px;
+    height: 620px;
     border: 1px solid #2A2A2A;
     overflow: hidden;
 
@@ -435,6 +435,19 @@ ul li:hover ul{
     object-fit: none;
     
 
+}
+
+.news article:nth-child(1) img{
+    object-fit: cover;
+    object-position: center top;
+    
+}
+
+
+.news article:nth-child(3) img{
+    object-fit: cover;
+    object-position: center top;
+    
 }
 
 .news h5{
