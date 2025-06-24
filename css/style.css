@@ -591,6 +591,7 @@ ul li:hover ul{
 
 /* 留言牆 */
 
+
 .card-sec{
     height: 372px;
 }
@@ -1238,6 +1239,9 @@ footer .footer-font{
     justify-content: space-around;
 
     background-color: #2A2A2A;
+
+    height: calc(100vh - 81px - 74px);
+    overflow: hidden;
 }
 
 .chatbox{
@@ -1270,7 +1274,7 @@ footer .footer-font{
 }
 
 .chat-left article:nth-last-child(1){
-    display: none;
+    /* display: none; */
 }
 
 .chat-right{
