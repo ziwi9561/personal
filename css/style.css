@@ -402,52 +402,49 @@ ul li:hover ul{
 
 /* 最新消息開始 */
 
-.news-section{}
+.news-section{
+    margin: 100px 0;
+}
 
-.news-section h3{
-    height: 108px;
+.news-section h1{
     text-align: center;
     line-height: 108px;
-    background-color: #2A2A2A;
-    color: #fff;
-    margin-bottom: 28px;
+    color: transparent;
+    font-weight: 600;
+    margin: 28px 0;
+
+    background-image: url(../img/1.homepage/textbg.png);
+    background-size: cover;
+    background-position: center;
+
+    background-clip: text;
 }
 
 .news{
     display: flex;
     justify-content:space-between;
     width: 950px;
-    margin: 0 auto;
+    margin: 0 125px;
+    flex-shrink: 0;
+
+    overflow: hidden;
+}
+
+.news .news-item{
+    display: flex;
+    width: 500px;
+    box-sizing: border-box;
 }
 
 .news article{
-    flex-direction: column;
-    width: 284px;
-    height: 620px;
     border: 1px solid #2A2A2A;
-    overflow: hidden;
+    padding-top: 40px;
+    width: 300px;
 
-}
+    top: 0px;
+    left: 100%;
 
-.news img{
-    height: 373px;
-    margin-bottom: 12px;
-    object-fit: none;
-    
-
-}
-
-.news article:nth-child(1) img{
-    object-fit: cover;
-    object-position: center top;
-    
-}
-
-
-.news article:nth-child(3) img{
-    object-fit: cover;
-    object-position: center top;
-    
+    display: none;
 }
 
 .news h5{
@@ -456,18 +453,14 @@ ul li:hover ul{
     text-overflow: ellipsis;
     text-align: center;
     margin: 0 12px;
-    
 }
 
 .news p{
-    height: 71px;
-    
-    overflow: hidden;
-    text-overflow: ellipsis;
     margin: 28px 12px 40px;
 }
 
 .news a{
+    width: 30%;
     margin: 28px 12px;
     padding: 10px 20px;
     text-decoration: none;
@@ -476,21 +469,68 @@ ul li:hover ul{
     border-radius: 50px;
 }
 
+.news-item img{
+    justify-content: space-around;
+}
+
+.news img:nth-of-type(1):hover{
+    filter: brightness(100%)
+}
+
+.news .news-first:hover .lyco{
+    display: block;
+}
+
+.news img:nth-of-type(2):hover{
+    
+    filter: brightness(100%)
+}
+
+.news .news-third:hover{
+    transform:translate(-20%,0);
+}
+
+.news .news-second:hover .trans{
+    display: block;
+}
+
+.news img:nth-of-type(3):hover{
+    filter: brightness(100%)
+}
+
+.news .news-third:hover .sui{
+    display: block;
+}
+
+.news div:nth-of-type(2) img{
+    margin: 0 auto;
+    width: 113px;
+    height: 145px;
+    margin-top: 220px;
+}
+
+
+
 /* 最新消息結束 */
 
 /* 今日聖地推薦 */
 
 .osusume-section{
-    
+    margin: 100px 0;
 }
 
-.osusume-section h3{
-    height: 108px;
+.osusume-section h1{
     text-align: center;
     line-height: 108px;
-    background-color: #2A2A2A;
-    color: #fff;
-    margin: 28px auto;
+    color: transparent;
+    font-weight: 600;
+    margin: 28px 0;
+
+    background-image: url(../img/1.homepage/rabbit.png);
+    background-size: cover;
+    background-position: 50% right;
+
+    background-clip: text;
 }
 
 .osusume article{
