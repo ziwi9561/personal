@@ -402,39 +402,49 @@ ul li:hover ul{
 
 /* 最新消息開始 */
 
-.news-section{}
+.news-section{
+    margin: 100px 0;
+}
 
-.news-section h3{
-    height: 108px;
+.news-section h1{
     text-align: center;
     line-height: 108px;
-    background-color: #2A2A2A;
-    color: #fff;
-    margin-bottom: 28px;
+    color: transparent;
+    font-weight: 600;
+    margin: 28px 0;
+
+    background-image: url(../img/1.homepage/textbg.png);
+    background-size: cover;
+    background-position: center;
+
+    background-clip: text;
 }
 
 .news{
     display: flex;
     justify-content:space-between;
     width: 950px;
-    margin: 0 auto;
+    margin: 0 125px;
+    flex-shrink: 0;
+
+    overflow: hidden;
+}
+
+.news .news-item{
+    display: flex;
+    width: 500px;
+    box-sizing: border-box;
 }
 
 .news article{
-    flex-direction: column;
-    width: 284px;
-    height: 588px;
     border: 1px solid #2A2A2A;
-    overflow: hidden;
+    padding-top: 40px;
+    width: 300px;
 
-}
+    top: 0px;
+    left: 100%;
 
-.news img{
-    height: 373px;
-    margin-bottom: 12px;
-    object-fit: none;
-    
-
+    display: none;
 }
 
 .news h5{
@@ -443,18 +453,14 @@ ul li:hover ul{
     text-overflow: ellipsis;
     text-align: center;
     margin: 0 12px;
-    
 }
 
 .news p{
-    height: 71px;
-    
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 28px 12px;
+    margin: 28px 12px 40px;
 }
 
 .news a{
+    width: 30%;
     margin: 28px 12px;
     padding: 10px 20px;
     text-decoration: none;
@@ -463,21 +469,68 @@ ul li:hover ul{
     border-radius: 50px;
 }
 
+.news-item img{
+    justify-content: space-around;
+}
+
+.news img:nth-of-type(1):hover{
+    filter: brightness(100%)
+}
+
+.news .news-first:hover .lyco{
+    display: block;
+}
+
+.news img:nth-of-type(2):hover{
+    
+    filter: brightness(100%)
+}
+
+.news .news-third:hover{
+    transform:translate(-20%,0);
+}
+
+.news .news-second:hover .trans{
+    display: block;
+}
+
+.news img:nth-of-type(3):hover{
+    filter: brightness(100%)
+}
+
+.news .news-third:hover .sui{
+    display: block;
+}
+
+.news div:nth-of-type(2) img{
+    margin: 0 auto;
+    width: 113px;
+    height: 145px;
+    margin-top: 220px;
+}
+
+
+
 /* 最新消息結束 */
 
 /* 今日聖地推薦 */
 
 .osusume-section{
-    
+    margin: 100px 0;
 }
 
-.osusume-section h3{
-    height: 108px;
+.osusume-section h1{
     text-align: center;
     line-height: 108px;
-    background-color: #2A2A2A;
-    color: #fff;
-    margin: 28px auto;
+    color: transparent;
+    font-weight: 600;
+    margin: 28px 0;
+
+    background-image: url(../img/1.homepage/rabbit.png);
+    background-size: cover;
+    background-position: 50% right;
+
+    background-clip: text;
 }
 
 .osusume article{
@@ -498,7 +551,8 @@ ul li:hover ul{
     position: absolute;
     width: 270px;
     height: 100%;
-    object-fit: none;
+    object-fit: cover;
+    object-position: 63% top;
     border-radius: 20px;
 
     top: 0;
@@ -576,6 +630,7 @@ ul li:hover ul{
 /* 跑馬燈結束 */
 
 /* 留言牆 */
+
 
 .card-sec{
     height: 372px;
@@ -664,6 +719,18 @@ footer .footer-font{
 
 .footer-font a:last-child::before{
     display: none;
+}
+
+.pet{
+    width: 48px;
+    height: 48px;
+    background-image: url(../img/gif/idle.gif);
+    background-size: cover;
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 
@@ -974,6 +1041,8 @@ footer .footer-font{
     
 }
 
+
+
 /* --------------第三頁的內容(最新消息)-------------- */
 
 .page3-new{
@@ -1224,6 +1293,9 @@ footer .footer-font{
     justify-content: space-around;
 
     background-color: #2A2A2A;
+
+    height: calc(100vh - 81px - 74px);
+    overflow: hidden;
 }
 
 .chatbox{
@@ -1236,12 +1308,19 @@ footer .footer-font{
 }
 
 .chat p{
-    height: auto;
+    max-height: 32px;
 
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    transition: 0.5s ease;
 }
+
+.chat-left article:hover>p{
+    max-height: 300px;
+    white-space: normal;
+} 
 
 .chat a{
     text-decoration: none;
@@ -1249,7 +1328,7 @@ footer .footer-font{
 }
 
 .chat-left article:nth-last-child(1){
-    display: none;
+    /* display: none; */
 }
 
 .chat-right{
@@ -1293,6 +1372,7 @@ footer .footer-font{
 .chat article:nth-child(4n+4) { 
     margin-left: 64px;
 }
+
 
 .btn-svg{
     position: absolute;
@@ -1470,7 +1550,7 @@ footer .footer-font{
 
 /* --------------第六頁的內容(成就系統)結束-------------- */
 
-/* --------------第六頁的內容(餵個企鵝)-------------- */
+/* --------------第七頁的內容(餵個企鵝)-------------- */
 
 .feed{
     margin: 55px 55px;
@@ -1545,15 +1625,18 @@ footer .footer-font{
 .donate-inf-ri h5+div{
     margin: 8px 0;
     background-color: #dfdfdf;
+    padding: 8px 8px;
 }
 
 .donate-inf-ri h5+div+div{
     margin-bottom: 12px;
     background-color: #dfdfdf;
+    padding: 8px 8px;
 }
 
 .donate-inf-ri label+input{
     margin-bottom: 12px;
+    width: 100%;
 }
 
 .donate-inf-ri label{
@@ -1569,12 +1652,15 @@ footer .footer-font{
 }
 
 .cityarea .city{
-    flex: 3;
+    /* flex: 3; */
+    width: 50%;
+    padding-right: 24px;
 }
 
+
 .cityarea .township{
-    flex: 1;
-    
+    /* flex: 1; */
+    width: 50%;
 }
 
 .donate-inf-ri .cityarea div:nth-child(2){
@@ -1588,14 +1674,21 @@ footer .footer-font{
 
 .donate-inf-ri .adressarea{
     display: flex;
+    
+    
 }
 
 .adressarea .road{
-    flex: 3;
+    /* flex: 3; */
+    box-sizing: border-box;
+    width: 75%;
+    padding-right: 24px;
 }
 
 .adressarea .zip{
-    flex: 1;
+    /* flex: 1; */
+    box-sizing: border-box;
+    width: 25%;
 }
 
 .agree{
@@ -1611,4 +1704,147 @@ footer .footer-font{
     background-color: #fff;
     border: 1px solid red;
     margin: 12px 0;
+    padding: 12px 0;
+}
+
+/* --------------第七頁的內容(餵個企鵝)結束-------------- */
+
+/* --------------第八頁的內容(巡禮熱點文章)-------------- */
+
+.hot{
+    display: flex;
+    margin: 64px 46px;
+}
+
+.art-le{
+    margin-right: 36px;
+}
+
+.art-le h3{
+    position: relative;
+}
+
+.art-le h3::after{
+    content: "";
+    border-top:1px solid black ;
+    width: 620px;
+    height: 1px;
+
+    position: absolute;
+    top: 20px;
+    left: 160px;
+}
+
+.search{
+    border: 2px solid rgb(42, 42, 42);
+    margin: 32px 0;
+    border-radius: 20px;
+    padding: 32px 52px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.date .date-data{
+    width: 178px;
+    height: 24px;
+    margin-bottom: 16px;
+}
+
+.key-word{
+    height: 24px;
+}
+
+.btnc{
+    display: flex;
+    flex-direction: column;
+    width: 136px;
+
+    margin: 0 36px;
+    
+}
+
+.btnc button{
+    padding: 8px 40px;
+
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.btnc button:nth-child(1){
+    margin-bottom: 4px;
+}
+
+.art a{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #2A2A2A;
+    margin-bottom: 44px;
+    padding-bottom: 44px;
+
+    text-decoration: none;
+    color: #000;
+
+}
+
+.art img{
+    border-radius: 10px;
+}
+
+
+.art a>div{
+    margin-left: 40px;
+    /* padding-bottom: 22px; */
+}
+
+
+.art div h5{
+    font-weight: 600;
+    color: #001494;
+}
+
+.art p{
+    margin: 12px 0;
+}
+
+.tag{
+    margin: 4px 12px 4px 0;
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    padding: 4px 8px;
+    color: #6b7df3;
+} 
+
+.page{
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #2A2A2A;
+}
+
+.page a{
+    margin: 0 4px;
+}
+
+.page a:nth-child(1), .page a:nth-child(9){
+    margin: 0 24px;
+}
+
+article .atop{
+    text-decoration: none;
+    color: #2A2A2A;
+}
+
+article .top{
+    display: flex;
+    margin: 8px 0;
+    align-items: center;
+}
+
+article .top img{
+    border-radius: 32px;
+    margin-right: 8px;
+    margin-bottom: 8px;
 }
