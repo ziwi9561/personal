@@ -1,0 +1,66 @@
+@media screen and (max-width: 1200px){
+    .wrapper{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1058px){
+    .banner h2{
+        font-size: 2rem;
+        top: 30px;
+    }
+
+    .banner h1{
+        top: 40px;
+    }
+
+    .banner{
+        height: 430px;
+        background-size: contain;
+    }
+
+    .banner h2+h1+img{
+        left: 490px;
+    }
+
+    .banner h2+h1+img{
+        top: 166px;
+        width: 300px;
+        left: 550px;
+    }
+
+    .orange{
+        bottom: 150px;
+        right: 310px;
+    }
+
+    .yellow{
+        right: 480px;
+        bottom: 100px;
+    }
+
+    .banner p+p+img{
+        top: 200px;
+        left: 450px;
+        width: 120px;
+    }
+
+    .banner p+img+img{
+        width: 200px;
+        top: 210px;
+    }
+
+    .god1{
+        left: 390px;
+    }
+
+    .news{
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 890px){
+    .wrapper{
+        width: auto;
+    }
+}
+}

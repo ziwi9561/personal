@@ -20,12 +20,14 @@ let mouseX = 0
 
         if (dx < 0) {
             $('.pet').css('transform', 'scaleX(-1)');
-            } else {
+        }else{
             $('.pet').css('transform', 'scaleX(1)');
-            }
+        }
 
         $('.pet').css('left', penguinX + dx * 0.1);
-      }, 20);
+    }, 20);
 
-
+    $('.ham').click(function(){
+        $(this).toggleClass('active')
+    })
 })

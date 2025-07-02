@@ -117,10 +117,6 @@ nav a{
     position: relative;
 }
 
-nav a:hover{
-    text-shadow: 5px 10px 10px #2A2A2A;
-}
-
 nav a::before{
     content: '';
     display: block;
@@ -144,6 +140,40 @@ nav li:last-child{
     position: relative;
 }
 
+.ham{
+    width: 24px;
+    height: 26px;
+    line-height: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    /* display: none; */
+}
+
+.transition{
+    transition: 1s;
+}
+
+.bar{
+    width: 24px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.ham.active .bar1{
+    transform: rotate(-45deg) translate(-9px, 7px);
+}
+
+.ham.active .bar2{
+    opacity: 0;
+}
+
+.ham.active .bar3{
+    transform: rotate(45deg) translate(-9px, -8px);
+}
 
 /* 子選單 */
 .submenu{
@@ -177,10 +207,6 @@ ul li .submenu{
 /* hover */
 ul li:hover ul{
     display: block;
-}
-
-.submenu a:hover{
- text-shadow: 0 3px 10px #2A2A2A;
 }
 
 /* header結束 */
@@ -464,8 +490,9 @@ ul li:hover ul{
     margin: 28px 12px;
     padding: 10px 20px;
     text-decoration: none;
-    color: #fff;
-    background-color: #2A2A2A;
+    color: #2A2A2A;
+    background-color: #ffffff;
+    border: 1px solid #2A2A2A;
     border-radius: 50px;
 }
 
@@ -533,60 +560,91 @@ ul li:hover ul{
     background-clip: text;
 }
 
+/*
 .osusume article{
     position: relative;
     height: 500px;
     width: 950px;
     margin: 0 auto;
 
-    /* border: 1px solid black; */
+    // border: 1px solid black; 
+}
+
+*/
+
+.osusume article{
+    display: grid;
+    grid-template-rows: 1fr 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+
 }
 
 .osusume .part1{
-    width: 300px;
-    margin-left: 8px;
+    /* width: 300px;
+    margin-left: 8px; */
+    grid-column: 1 / 1 ;
+    grid-row: 1 / 1;
+    padding: 0 20px 0 20px;
 }
 
 .osusume img{
-    position: absolute;
-    width: 270px;
+    /* position: absolute; */
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 63% top;
     border-radius: 20px;
 
-    top: 0;
-    right: 360px;
+    /* top: 0;
+    right: 360px; */
+    grid-column: 2 / 3 ;
+    grid-row: 1 / 4;
 }
 
 .osusume .video{
-    position: absolute;
+    /* position: absolute; */
 
-    width: 250px;
-    height: 250px;
+    width: 100%px;
+    height: 100%;
     border-radius: 20px;
+    margin-left: 20px;
 
-    top: 0;
-    right: 80px;
+    grid-column: 3 / 4 ;
+    grid-row: 1 / 2;
+
+    /* top: 0;
+    right: 80px; */
 }
 
 .osusume .part2{
-    position: absolute;
-    width: 320px;
+    /* position: absolute; */
+    width: 100%;
 
-    top: 270px;
-    right: 10px;
+    /* top: 270px;
+    right: 10px; */
+
+    box-sizing: border-box;
+    grid-column: 3 / 4 ;
+    grid-row: 2 / 3;
+    padding: 40px 20px 0 20px;
 }
 
 .osusume a{
-    display: inline-block;
-    margin: 250px 0 0 90px;
+    /* display: inline-block; */
+    /* margin: 250px 0 0 90px; */
+    width: 100px;
+    height: 20px;
     padding: 10px 20px;
+    margin-left: 20px;
     text-decoration: none;
     color: #000000;
     background-color: #ffffff;
     border-radius: 50px;
     border: 1px solid black;
+    text-align: center;
+
+    grid-column: 1 / 2 ;
+    grid-row: 2 / 3;
 }
 
 /* osusume結束 */
@@ -639,6 +697,9 @@ ul li:hover ul{
 .card-art{
     display: flex;
     margin-bottom: 28px;
+    height: 300px;
+
+    overflow: auto;
 }
 
 .card{
