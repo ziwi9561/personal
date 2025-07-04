@@ -61,6 +61,34 @@
     @media screen and (max-width: 890px){
     .wrapper{
         width: auto;
+        
     }
-}
+
+    .bar{
+        display: block;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .ham.active{
+        background-color: #fff;
+    }
+
+    .ham.active ul{
+        display: block;
+
+        background-color: #fff;
+        width: 30%;
+        border: 1px solid block;
+    }
+
+
+
+
+
+
+
+    }
 }
