@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="icon" href="../img/icon.png">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="../js/index.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -15,6 +17,12 @@
             <a href="../index.html"><img src="../img/logo.svg" alt="logo"></a>
 
             <nav>
+                <div class="ham transition">
+                    <div class="bar bar1 transition"></div>
+                    <div class="bar bar2 transition"></div>
+                    <div class="bar bar3 transition"></div>
+                </div>
+                
                 <ul>
                     <li><a href="./about-us.html">關於我們</a></li>
                     <li><a href="./news.html">最新消息</a></li>
@@ -27,7 +35,9 @@
                             <li><a href="#">登陸</a></li>
                         </ul>
                     </li>
+
                 </ul>
+
             </nav>
 
 
@@ -37,36 +47,36 @@
 
                 <section class="planarea">
 
-                    <h2>餵企鵝吃東西</h2>
+                    <h2>請選擇贊助方案</h2>
 
                     <div>
                         <article>
                             <img src="../img/7.donate/01.png" alt="浮游生物">
-                            <h5>方案1.</h5>
+                            <h6>方案1.</h6>
                             <h5>餵浮游生物</h5>
                         </article>
 
                         <article>
                             <img src="../img/7.donate/02.png" alt="小螃蟹">
-                            <h5>方案2.</h5>
+                            <h6>方案2.</h6>
                             <h5>餵小螃蟹</h5>
                         </article>
 
                         <article>
                             <img src="../img/7.donate/03.png" alt="頭足類">
-                            <h5>方案3.</h5>
+                            <h6>方案3.</h6>
                             <h5>餵頭足類</h5>
                         </article>
 
                         <article>
                             <img src="../img/7.donate/04.png" alt="磷蝦">
-                            <h5>方案4.</h5>
+                            <h6>方案4.</h6>
                             <h5>餵磷蝦</h5>
                         </article>
 
                         <article>
                             <img src="../img/7.donate/05.png" alt="沙丁魚">
-                            <h5>方案5.</h5>
+                            <h6>方案5.</h6>
                             <h5>餵沙丁魚</h5>
                         </article>
 
@@ -81,31 +91,31 @@
                         <div class="inf">
 
                             <div class="result-plan">
-                            <h5>方案：</h5>
+                            <h6>方案：</h6>
                             <h5>1.餵浮游生物</h5>
                             </div>
                             
                             <div class="dollar">
-                            <h5>金額：</h5>
+                            <h6>金額：</h6>
                             <h5>NT$ 50</h5>
                             </div>
                             <br>
-                            <h5>每筆贊助抽取80%捐贈給台灣創作相關機關，20%用於維護平台</h5>
+                            <p>每筆贊助抽取80%捐贈給台灣創作相關機關，20%用於維護平台</h5>
                             <br>
-                            <h5>感謝您的愛心，我們將提供如下：</h5>
+                            <p>感謝您的愛心，我們將提供如下：</h5>
                             <br>
-                            <h5>● 不定期的正版周邊抽獎(請注意不同贊助金額，有不同的抽取品項)</h5>
+                            <p>● 不定期的正版周邊抽獎(請注意不同贊助金額，有不同的抽取品項)</h5>
                         </div>
 
                         <div class="count">
 
                             <div class="plan-dollar">
-                            <h5>選項金額</h5>
+                            <h6>選項金額</h6>
                             <h5>NT$ 50</h5>
                             </div>
 
                             <div class="contri">
-                            <h5>愛心贊助</h5>
+                            <h6>愛心贊助</h6>
                             <h5>NT$ 50</h5>
                             </div>
 
@@ -162,6 +172,10 @@
                             </div>
 
                         </div>
+
+                        <label for="where">收件人</label>
+                        <input type="text" value="" id="where">
+
 
                         <label for="mail">電子信箱</label>
                         <input type="email" id="mail">

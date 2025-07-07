@@ -3,13 +3,13 @@
 
 $(document).ready(function(){
 
-/*
-1.找到滑鼠的x軸
-2.企鵝X軸與滑鼠的相減，計算出距離
-3.讓企鵝能夠追著滑鼠跑
-*/
+    /*
+    1.找到滑鼠的x軸
+    2.企鵝X軸與滑鼠的相減，計算出距離
+    3.讓企鵝能夠追著滑鼠跑
+    */
 
-let mouseX = 0
+    let mouseX = 0
 
     $(document).mousemove(function(e){
         mouseX = e.clientX
@@ -32,4 +32,8 @@ let mouseX = 0
     $('.ham').click(function(){
         $(this).toggleClass('active')
     })
+
+
+
+    
 })

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="icon" href="../img/icon.png">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="../js/index.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -15,6 +17,12 @@
             <a href="../index.html"><img src="../img/logo.svg" alt="logo"></a>
 
             <nav>
+                <div class="ham transition">
+                    <div class="bar bar1 transition"></div>
+                    <div class="bar bar2 transition"></div>
+                    <div class="bar bar3 transition"></div>
+                </div>
+                
                 <ul>
                     <li><a href="./about-us.html">關於我們</a></li>
                     <li><a href="./news.html">最新消息</a></li>
@@ -27,7 +35,9 @@
                             <li><a href="#">登陸</a></li>
                         </ul>
                     </li>
+
                 </ul>
+
             </nav>
 
 
@@ -35,7 +45,7 @@
 
         <main>
 
-            <section>
+            <section class="osusue-wrapper" id="osusue-wrapper">
 
                 <article class="Touhou-Project">
                     
@@ -65,12 +75,6 @@
 
                     <div class="osusume-right">
                         <img src="../img/4.recommend/redpeo.png" alt="東方角色">
-                        <svg class="dot" xmlns="http://www.w3.org/2000/svg" width="20" height="104" viewBox="0 0 20 104" fill="none">
-                        <circle cx="10" cy="10" r="10" fill="#A7A7A7"/>
-                        <circle cx="10" cy="38" r="10" fill="#D9D9D9"/>
-                        <circle cx="10" cy="66" r="10" fill="#D9D9D9"/>
-                        <circle cx="10" cy="94" r="10" fill="#D9D9D9"/>
-                        </svg>
                     </div>
 
                 </article>
@@ -104,13 +108,6 @@
 
                     <div class="osusume-right">
                         <img src="../img/4.recommend/conan.png" alt="柯南">
-                        <svg class="dot" xmlns="http://www.w3.org/2000/svg" width="20" height="104" viewBox="0 0 20 104" fill="none">
-                        <circle cx="10" cy="10" r="10" fill="#D9D9D9"/>
-                        <circle cx="10" cy="38" r="10" fill="#A7A7A7"/>
-                        <circle cx="10" cy="66" r="10" fill="#D9D9D9"/>
-                        <circle cx="10" cy="94" r="10" fill="#D9D9D9"/>
-                        </svg>
-                        </svg>
                     </div>
 
                 </article>
@@ -143,12 +140,6 @@
 
                     <div class="osusume-right">
                         <img src="../img/4.recommend/Suisei.png" alt="星街">
-                        <svg class="dot" xmlns="http://www.w3.org/2000/svg" width="20" height="104" viewBox="0 0 20 104" fill="none">
-                        <circle cx="10" cy="10" r="10" fill="#D9D9D9"/>
-                        <circle cx="10" cy="38" r="10" fill="#D9D9D9"/>
-                        <circle cx="10" cy="66" r="10" fill="#A7A7A7"/>
-                        <circle cx="10" cy="94" r="10" fill="#D9D9D9"/>
-                        </svg>
                     </div>
 
                 </article>
@@ -181,19 +172,20 @@
 
                     <div  class="osusume-right">
                         <img src="../img/4.recommend/chisato.png" alt="千速">
-                        <svg class="dot" xmlns="http://www.w3.org/2000/svg" width="20" height="104" viewBox="0 0 20 104" fill="none">
-                        <circle cx="10" cy="10" r="10" fill="#D9D9D9"/>
-                        <circle cx="10" cy="38" r="10" fill="#D9D9D9"/>
-                        <circle cx="10" cy="66" r="10" fill="#D9D9D9"/>
-                        <circle cx="10" cy="94" r="10" fill="#A7A7A7"/>
-                        </svg>
                     </div>
 
                 </article>
 
             </section>
-                
-                
+            
+            <div class="obutton-wrapper">
+                <ul id="osusume-button">
+                    <li class="clicked"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
 
         </main>
 

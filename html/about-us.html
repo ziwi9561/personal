@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="icon" href="../img/icon.png">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="../js/index.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -15,6 +17,12 @@
             <a href="../index.html"><img src="../img/logo.svg" alt="logo"></a>
 
             <nav>
+                <div class="ham transition">
+                    <div class="bar bar1 transition"></div>
+                    <div class="bar bar2 transition"></div>
+                    <div class="bar bar3 transition"></div>
+                </div>
+                
                 <ul>
                     <li><a href="./about-us.html">關於我們</a></li>
                     <li><a href="./news.html">最新消息</a></li>
@@ -27,9 +35,10 @@
                             <li><a href="#">登陸</a></li>
                         </ul>
                     </li>
-                </ul>
-            </nav>
 
+                </ul>
+
+            </nav>
 
         </header>
 
@@ -44,7 +53,7 @@
         <main>
 
             <section class="purpose">
-                <h3>服務宗旨｜社是</h3>
+                <h1>服務宗旨<br>社是</h1>
 
                 <article>
                     
@@ -54,7 +63,7 @@
                     </div>
 
                     <div class="purpose-2">
-                        <h5>設立專屬的巡禮地圖與分享平台</h5>
+                        <h5>設立專屬分享平台</h5>
                         <p>無論是初次巡禮的新手，還是資深聖地獵人，次元散步提供可查詢、可投稿的導覽平台，讓每位粉絲都能留下自己的足跡與故事。</p>
                     </div>
 
@@ -73,7 +82,7 @@
             </section>
             
             <section class="contact">
-                <h3>聯絡我們</h3>
+                <h1>聯絡我們</h1>
 
                 <div class="contact-in">
                     <article class="infomation">
@@ -134,7 +143,7 @@
 
                             <div>
                             <label for="contact">內容</label>
-                            <input class="t-area" type="textarea" name="mycontact" id="contact">
+                            <textarea name="mycontact" id="contact"></textarea>
                             </div>
 
                             <input class="submit" type="submit" value="送出">

@@ -70,6 +70,10 @@ p{
 
 /* 設計系統結束 */
 
+* {
+    box-sizing: border-box;
+}
+
 body{}
 
 .wrapper{
@@ -147,16 +151,13 @@ nav li:last-child{
     display: none;
 }
 
-.ham.active{
-
-}
+.ham.active{}
 
 .ham.active ul{
     display: block;
 
     background-color: #fff;
     width: 30%;
-    border: 1px solid block;
 }
 
 .transition{
@@ -1154,7 +1155,7 @@ footer .footer-font{
     }
 
     .news article{
-        height: 300px;
+        height: 360px;
         border: 1px solid black;
     }
 
@@ -1253,6 +1254,7 @@ footer .footer-font{
 
 .banner-p2{
     background-color: #fff;
+    border-bottom: 1px solid black;
     height: 600px;
     position: relative;
 
@@ -1394,15 +1396,22 @@ footer .footer-font{
 
 /* 服務宗旨 */
 
-.purpose{}
+.purpose{
+    margin-bottom: 70px;
+}
 
-.purpose h3{
-    height: 108px;
+.purpose h1{
     text-align: center;
     line-height: 108px;
-    background-color: #2A2A2A;
-    color: #fff;
-    margin-bottom: 28px;
+    color: transparent;
+    font-weight: 600;
+    margin: 48px 0;
+
+    background-image: url(../img/1.homepage/textbg.png);
+    background-size: cover;
+    background-position: center;
+
+    background-clip: text;
 }
 
 .purpose article{
@@ -1456,17 +1465,23 @@ footer .footer-font{
 
 /* 聯絡我們 */
 
-.contact h3{
-    height: 108px;
+.contact h1{
     text-align: center;
     line-height: 108px;
-    background-color: #2A2A2A;
-    color: #fff;
-    margin: 44px 0 28px 0;
+    color: transparent;
+    font-weight: 600;
+    margin: 48px 0;
+
+    background-image: url(../img/1.homepage/rabbit.png);
+    background-size: cover;
+    background-position: center;
+
+    background-clip: text;
 }
 
 .contact-in{
     display: flex;
+    flex-direction: row-reverse;
     width: 60%;
     /* border: 1px solid blue; */
     margin: 0 auto;
@@ -1512,7 +1527,7 @@ footer .footer-font{
 .ques{
     display: flex;
     max-width: 50%;
-    margin-left: 20px;
+    margin-right: 20px;
     width: 100%;
 
     /* border: 1px solid red; */
@@ -1541,11 +1556,14 @@ footer .footer-font{
     padding-left: 8px;
 }
 
-.t-area{
+.ques textarea{
+    width: 200px;
     height: 200px;
     resize: none;
+    border: 2px solid black;
     box-sizing: border-box;
-    padding-bottom: 160px;
+    border-radius: 20px;
+    padding-top: 20px;
 
 }
 
@@ -1555,6 +1573,86 @@ footer .footer-font{
     margin: 48px auto 0;
     
 }
+
+@media screen and (max-width: 800px){
+    .banner-p2 .girl-bottom{
+        display: none
+    }
+
+    .purpose article{
+        width: 600px;
+    }
+
+    .purpose h1, .contact h1{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .banner-p2{
+        display: none;
+    }
+
+    .purpose h1{
+        line-height: 1;
+        font-size: 2.5rem;
+    }
+
+    footer p, .footer-font a{
+    font-size: 14px;
+}
+
+.purpose article{
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:"purpose-1"
+                        "purpose-2"
+                        "purpose-3"
+                        "purpose-4";
+
+    width: calc(100% - 40px);
+    margin: 0 20px;
+
+}
+
+.contact-in{
+    flex-direction: column-reverse;
+}
+
+.infomation, .ques {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.infomation{
+    margin-top: 20px;
+}
+
+.infomation div {
+    width: 100%;
+}
+
+.ques form {
+    margin-left: 0;
+}
+
+.ques textarea{
+        width: 222px;
+}
+
+    
+}
+
+@media screen and (max-width: 390px){
+
+    .ques textarea{
+        width: 200px;
+    }
+}
+
+
 
 
 
@@ -1709,6 +1807,84 @@ footer .footer-font{
     z-index: 0;
 }
 
+@media screen and (max-width: 800px){
+
+    .beginning{
+        width: 100%;
+    }
+
+    .see-more{
+        width: 95%;
+    }
+
+    .beginning h3::after{
+        width: 75%;
+    }
+
+    .page3-new{
+        margin: 0 20px;
+        width: calc(100% - 40px);
+    }
+
+    .mes-right a:nth-child(2), .mes-right a:nth-child(4){
+        display: none;
+    }
+
+    .mes-right{
+        flex-direction: column;
+
+        flex: 0px;
+        justify-content: center;
+    }
+
+    .mes-left{
+        display: block;
+        width: 300px;
+        height: 300px;
+
+        flex: -1px;
+        margin: 0 auto
+    }
+
+    .end{
+        margin: 0 40px 40px;
+    }
+
+    
+}
+
+@media screen and (max-width: 430px){
+    .see-more{
+        width: 95%;
+    }
+
+    .beginning h3::after{
+        width: 55%;
+    }
+
+    .end{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .mes-right{
+        width: 100%;
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .see-more{
+            width: 95%;
+        }
+
+        .beginning h3::after{
+            width: 50%;
+        }
+
+}
+
+
 /* --------------第三頁的內容(最新消息)結束-------------- */
 
 
@@ -1716,6 +1892,43 @@ footer .footer-font{
 
 
 /* 東方 */
+
+.osusue-wrapper{
+    overflow: hidden;
+
+    width: 1200px;
+    height: 800px;
+}
+
+.obutton-wrapper{
+    position: relative;
+}
+
+#osusume-button{
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    top: -450px;
+    right: 30px;
+}
+
+#osusume-button li{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 10px;
+
+}
+
+#osusume-button li.clicked{
+    background-color: #666;
+}
+
+.osusume-button{
+
+}
 
 .Touhou-Project, .conan, .suisei, .Lycoris-Recoil{
     display: flex;
@@ -1795,8 +2008,100 @@ footer .footer-font{
 }
 
 .conan, .suisei, .Lycoris-Recoil{
-    display: none;
+    /* display: none; */
 }
+
+@media screen and (max-width: 1144px) {
+
+    .osusume-right img{
+        display: none;
+    }
+
+    .osusue-wrapper{
+
+    width: auto;
+    height: auto;
+}
+
+    .obutton-wrapper{
+        display: none;
+    }
+
+    #osusume-button{
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .osusume-left {
+        width: 90%;
+        margin: 40px auto 0;
+    }
+
+    .Touhou-Project, .conan, .suisei, .Lycoris-Recoil{
+        height: auto;
+    }
+
+    .osusume-left{
+        margin: 40px auto 40px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    .osusume-left h1{
+        font-size: 4rem;
+
+        margin-top: 20px;
+    }
+
+    .tourist-spot {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .osusume-left {
+        text-align: center;
+
+        height: auto;
+    }
+
+    .osusume-left h1, .osusume-left h4 {
+        margin-bottom: 20px;
+    }
+
+    .osusume-left > a {
+        margin-top: 40px;
+
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+  .osusume-left h4 {
+    font-size: 1.5rem;
+  }
+
+  .osusume-left > a {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .footer-font p,
+  .footer-font a {
+    font-size: 0.8rem;
+  }
+
+  .tourist-spot{
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 
 /* --------------第四頁的內容(推薦景點)結束-------------- */
 
@@ -1807,9 +2112,9 @@ footer .footer-font{
     display: flex;
     justify-content: space-around;
 
-    background-color: #2A2A2A;
+    background-image: url(../img/5.chat/bg.png);
 
-    height: calc(100vh - 81px - 74px);
+    height: calc(880px - 81px - 74px);
     overflow: hidden;
 }
 
@@ -1830,6 +2135,14 @@ footer .footer-font{
     white-space: nowrap;
 
     transition: 0.5s ease;
+}
+
+.chat-left{
+    overflow: auto;
+}
+
+.chat-left::-webkit-scrollbar{
+    display: none;
 }
 
 .chat-left article:hover>p{
@@ -1856,7 +2169,7 @@ footer .footer-font{
 }
 
 
-.chat-right .con{
+.chat-right #con{
     margin-top: 24px;
     height: calc(100% - 48px - 30px);
     width: 346px;
@@ -1867,7 +2180,7 @@ footer .footer-font{
 
     box-sizing: border-box;
     resize: none;
-    padding-bottom: 460px;
+    padding-top: 20px;
     padding-left: 20px;
 }
 
@@ -1890,12 +2203,10 @@ footer .footer-font{
 
 
 .btn-svg{
-    position: absolute;
     display: flex;
     width: 346px;
     height: 36px;
     background-color: #bdbdbd;
-    bottom: 72px;
 
     justify-content: flex-end;
     align-items: center;    
@@ -1915,6 +2226,68 @@ footer .footer-font{
     height: 36px;
 }
 
+@media screen and (max-width: 800px) {
+.chat{
+    flex-direction: column-reverse;
+}
+
+.chat-right{
+    height: 1000px;
+    padding: 20px;
+}
+
+.chat-right #con{
+    width: auto;
+    /* min-height: 500px; */
+}
+
+.btn-svg{
+    width: 100%;
+    height: 80px;
+}
+
+.btn-svg svg{
+    width: 60px;
+    margin: 0 4px;
+}
+
+
+.sub{
+    height: 60px;
+    margin: 24px 0 0;
+}
+
+.chat-left{
+    margin: 0 auto;
+    width: 100%;
+
+    display: flex;
+    height: 100%;
+
+    overflow: auto;
+    
+}
+
+.chat article { 
+    margin: 0 24px;
+}
+
+.chat article:nth-child(4n+1), .chat article:nth-child(4n+2), .chat article:nth-child(4n+3), .chat article:nth-child(4n+4){ 
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+.chat article:nth-child(4n+1){
+    margin-left: 20px;
+}
+
+.chat p{
+    overflow: visible;
+    white-space: wrap;
+}
+
+}
+
 /* --------------第五頁的內容(說個幾句)結束-------------- */
 
 /* --------------第六頁的內容(成就系統)-------------- */
@@ -1929,6 +2302,7 @@ footer .footer-font{
 .up .gear{
     display: flex;
     flex-wrap: wrap;
+    
 
     width: 600px;
     
@@ -1943,18 +2317,10 @@ footer .footer-font{
     border-radius: 10px;
 }
 
-.up .opt:hover p:nth-child(1){
-    opacity: 1;
-}
-
 .up .opt p{
     text-align: center;
     padding: 0 12px;
     margin: 4px 0;
-}
-
-.opt p:nth-child(1){
-    opacity: 0;
 }
 
 .up .opt p:nth-child(3){
@@ -2051,21 +2417,174 @@ footer .footer-font{
 
 .badgebox{
     margin: 36px 0 24px 0;
-    display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 124px);
+    gap: 16px;
 }
 
 .badgebox .badge{
     background-color: #fff;
-    width: 124px;
-    height: 124px;
-    border-radius: 64px;
+    width: 100%;
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 800px) {
+.up{
+    flex-direction: column-reverse;
+}
+
+.up .doll{
+    width: auto;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+
+.doll img:nth-child(1){
+    left: 260px;
+}
+
+.doll img:nth-child(2){
+    left: 288px;
+}
+
+.doll img:nth-child(3){
+    left: 293px;
+}
+
+.doll img:nth-child(4){
+    left: 371px;
+}
+
+.doll img:nth-child(5){
+    left: 372px;
+}
+
+.up .gear{
+    width: 100%;
+
+    justify-content: center;
+}
+
+.badgebox{
+    grid-template-columns: repeat(4, 20%);
+}
+
+.badgebox .badge{
+    display: flex;
+}
+
+
+}
+
+@media screen and (max-width: 430px) {
+.up{
+    flex-direction: column-reverse;
+}
+
+.up .doll{
+    width: auto;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.doll img:nth-child(1){
+    left: 60px;
+}
+
+.doll img:nth-child(2){
+    left: 89px;
+}
+
+.doll img:nth-child(3){
+    left: 93px;
+}
+
+.doll img:nth-child(4){
+    left: 118px;
+}
+
+.doll img:nth-child(5){
+    left: 126px;
+}
+
+.up .gear{
+    width: 100%;
+
+    justify-content: space-between;
+}
+
+.up .opt{
+    width: calc(50% - 8px);
+
+    margin:0;
+    margin: 4px 4px;
+}
+
+.up .opt img{
+    width: calc(100% - 24px);
+}
+
+.up .opt p:nth-child(3){
+    font-size: 12px;
+}
+
+.up .opt p{
+    font-size: 12px;
+}
+
+.chieve{
+    padding: 20px
+}
+
+.badgebox{
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.chieve div:nth-child(1){
+    display: block;
+}
+
+.kind{
+    margin-top: 12px;
+}
+
+.kind a{
+    margin: 6px;
+
+}
+
+.badgebox{
+    width: 100%;
+
+}
+
+.badgebox .badge{
+    width: 100px;
+    height: 100px;
+    margin: 0 4px;
+}
+
+.badge img{
+    width: 100px;
+    height: 100px;
+}
+
+
 }
 
 /* --------------第六頁的內容(成就系統)結束-------------- */
 
 /* --------------第七頁的內容(餵個企鵝)-------------- */
+
+.feed h6{
+    font-size: 20px;
+}
+
+.feed h5{
+    font-weight: 500;
+}
 
 .feed{
     margin: 55px 55px;
@@ -2216,10 +2735,126 @@ footer .footer-font{
 
 .submi{
     width: 280px;
-    background-color: #fff;
-    border: 1px solid red;
+    background-color: rgb(211, 0, 0);
+    color: white;
+    border: none;
+    font-weight: 600;
     margin: 12px 0;
     padding: 12px 0;
+}
+
+@media screen and (max-width: 800px) {
+    .feed {
+        margin: 24px;
+    }
+
+    .planarea div {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        margin-bottom: 12px;
+    }
+
+    .donate-inf {
+        flex-direction: column;
+    }
+
+    .donate-inf-ri {
+        margin: 36px auto 36px;
+    }
+
+    .donate-inf{
+        margin: 0 auto;
+        margin: 24px 48px 0;
+    }
+
+    .donate-inf-ri label {
+        font-size: 20px;
+    }
+
+    .donate-inf-ri input {
+        font-size: 20px;
+    }
+
+    .submi {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .feed {
+        margin: 4px;
+    }
+
+    .planarea h2{
+        margin-top: 24px;
+        margin-bottom: 12px;
+
+        font-size: 1.5rem;
+    }
+
+    .feed h6{
+        font-size: 1rem;
+    }
+
+    .feed h5{
+        font-size: 1rem;
+    }
+
+    .donate-inf-ri label{
+        font-size: 1rem;
+    }
+
+    .planarea div {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
+        
+        margin: 0 auto 12px;
+    }
+
+    .donate-inf{
+
+}
+
+.donate-inf-ri{
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width: 430px) {
+    .feed {
+        margin: 4px;
+    }
+
+
+    .planarea div {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 180px 180px ;
+        
+        margin: 0 auto 12px;
+    }
+
+    .donate-inf{
+        margin: 24px 12px 0;
+    }
+
+    .donate-inf-le .inf{
+        width: 100%;
+        margin: 0 auto 0;
+    }
+
+    .planarea article{
+        width: 180px;
+    }
+
+    .planarea img{
+        width: 100%;
+    }
+
 }
 
 /* --------------第七頁的內容(餵個企鵝)結束-------------- */
@@ -2334,13 +2969,12 @@ footer .footer-font{
 .page{
     display: flex;
     justify-content: center;
-
-    text-decoration: none;
-    color: #2A2A2A;
 }
 
 .page a{
     margin: 0 4px;
+    text-decoration: none;
+    color: #2A2A2A;
 }
 
 .page a:nth-child(1), .page a:nth-child(9){
@@ -2362,4 +2996,150 @@ article .top img{
     border-radius: 32px;
     margin-right: 8px;
     margin-bottom: 8px;
+}
+
+@media screen and (max-width: 800px) {
+    .hot{
+    flex-direction: column-reverse;
+    }
+
+    .art-ri{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ad{
+        display: flex;
+        
+    }
+
+    .ad img{
+        height: 360px;
+    }
+
+    .ad img:nth-of-type(1){
+        margin: 0 12px;
+    }
+
+    .art-le h3::after{
+        width: 80%;
+    }
+
+    .search{
+        flex-direction: column;
+    }
+
+    .btnc{
+        flex-direction: row;
+        margin-left: 350px;
+        width: 100%;
+    }
+
+    .btnc button{
+        padding: 8px 12px;
+        margin: 0 12px;
+        width: 100px;  
+    }
+
+    .btnc button:nth-child(1){
+        margin-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .hot{
+        margin: 12px 24px;
+    }
+
+    .art-ri{
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 24px;
+    }
+
+    .ad{
+        margin: 0 auto;
+    }
+
+    .ad img{
+        height: 300px;
+    }
+
+    .art-le h3{
+        font-size: 2rem;
+    }
+
+    .art-le h3::after{
+        width: 55%;
+    }
+
+    .art-le{
+        margin-right: 0;
+    }
+
+    .btnc{
+        margin: 8px 0 0 130px;
+        width: auto;
+    }
+
+    .date input:nth-of-type(2){
+        margin-left: 67px;
+    }
+
+    .key-word{
+        margin-left: 15px;
+    }
+
+    .btnc button:nth-child(2){
+        display: none;
+    }
+
+    .art a{
+        flex-direction: column;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+    }
+
+    .art a>div{
+        margin: 12px 24px 0;
+    }
+
+    .hashtag{
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 390px) {
+
+    .ad img{
+        height: 250px;
+    }
+
+    .date input:nth-of-type(2){
+        margin-left: 0;
+    }
+
+    .key-word{
+        margin-left: 0;
+    }
+
+    .btnc button:nth-child(2){
+        display: none;
+    }
+
+    .art a{
+        flex-direction: column;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+    }
+
+    .art a>div{
+        margin: 12px 24px 0;
+    }
+
+    .hashtag{
+        white-space: nowrap;
+    }
 }
