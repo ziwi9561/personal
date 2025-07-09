@@ -34,6 +34,20 @@ $(document).ready(function(){
     })
 
 
+    // 字數限制
+    let textMax = $('#con').attr('maxlength')
+    $('#limit').html(`還能再打<span>${textMax}</span> / ${textMax}個字 `)
+
+
+    $('#con').keyup(function(){
+        let textLength = $(this).val().length
+
+        $('#limit').html(`還能再打<span>${textMax - textLength}</span> / ${textMax}個字`)       
+    })
+
+    
+    //新增框格、新增評價內容
+    let articleArray = $('article').toArray();
 
     
 })

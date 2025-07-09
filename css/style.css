@@ -1375,7 +1375,7 @@ footer .footer-font{
     top: 600px;
     right: 60px;
 
-    animation-name:girl-bottomtotop;
+    animation-name: girl-bottomtotop;
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-delay: 2s;
@@ -1575,6 +1575,10 @@ footer .footer-font{
 }
 
 @media screen and (max-width: 800px){
+    .banner-p2{
+        height: 450px;
+    }
+
     .banner-p2 .girl-bottom{
         display: none
     }
@@ -1590,8 +1594,48 @@ footer .footer-font{
 
 @media screen and (max-width: 430px){
     .banner-p2{
+        /* display: none; */
+        height: 200px;
+    }
+
+    .banner-p2 .first-sent{
+        top: 20px;
+        left: 140px;
+
+        font-size: 1.5rem;
+
+        animation: none;
+    }
+
+    .banner-p2 .second-sent{
+        top: 60px;
+        left: 90px;
+        font-size: 1rem;
+
+        animation: none;
+    }
+
+    .banner-p2 .girl-top{
         display: none;
     }
+
+    .banner-p2 .girl-bottom{
+        display: block;
+        right: 100px;
+        animation-delay: 0s;
+    }
+
+    @keyframes girl-bottomtotop{
+    0%{
+        top: 300px;
+        right: 40px;
+    }
+
+    100%{
+        top: 60px;
+        right: 40px;
+    }
+}
 
     .purpose h1{
         line-height: 1;
@@ -1647,12 +1691,31 @@ footer .footer-font{
 
 @media screen and (max-width: 390px){
 
+    .banner-p2 .first-sent{
+        left: 130px;
+    }
+
+    .banner-p2 .second-sent{
+        left: 80px;
+    }
+
     .ques textarea{
         width: 200px;
     }
+
+    @keyframes girl-bottomtotop{
+    0%{
+        top: 300px;
+        right: 10px;
+    }
+
+    100%{
+        top: 60px;
+        right: 10px;
+    }
 }
 
-
+}
 
 
 
@@ -2124,7 +2187,7 @@ footer .footer-font{
     margin: 24px  0;
 
     background-color: #fff;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 .chat p{
@@ -2176,12 +2239,22 @@ footer .footer-font{
     border: none;
     outline: none;
 
-    border-radius: 5% 5% 0 0;
+    border-radius: 5px 5px 0 0;
 
     box-sizing: border-box;
     resize: none;
     padding-top: 20px;
-    padding-left: 20px;
+    padding: 20px;
+    font-size: 24px;
+}
+
+#limit{
+    background-color: #fff;
+    width: 100%;
+    height: 30%;
+    text-align: right;
+    line-height: 200%;
+    padding: 0 8px;
 }
 
 
@@ -2220,7 +2293,7 @@ footer .footer-font{
 
 .sub{
     padding: 8px 10px;
-    border-radius: 10%;
+    border-radius: 10px;
     margin: 12px 0 24px;
 
     height: 36px;
@@ -2901,6 +2974,10 @@ footer .footer-font{
     margin-bottom: 16px;
 }
 
+.tilde{
+    display: inline-block;
+}
+
 .key-word{
     height: 24px;
 }
@@ -3121,6 +3198,14 @@ article .top img{
         margin-left: 0;
     }
 
+    .date .date-data{
+        margin-left: 51px;
+    }
+
+    .tilde{
+        margin-left: 39px;
+    }
+
     .key-word{
         margin-left: 0;
     }
@@ -3142,4 +3227,5 @@ article .top img{
     .hashtag{
         white-space: nowrap;
     }
+
 }
