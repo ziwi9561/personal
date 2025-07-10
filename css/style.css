@@ -100,6 +100,10 @@ header a{
     margin-left: 20px;
 }
 
+header a img{
+    height: 100%;
+}
+
 nav{
     display: flex;
     justify-content: flex-end;
@@ -831,6 +835,8 @@ footer .footer-font{
     .wrapper{
         width: auto;
     }
+
+    
 }
 
 @media screen and (max-width: 1058px){
@@ -903,6 +909,13 @@ footer .footer-font{
         position: relative;
     }
 
+    .submenu li{
+        text-align: left;
+        line-height: 2rem;
+        width: 100%;
+        margin: 5px;
+    }
+
     .ham{
         width: 24px;
         height: 26px;
@@ -921,6 +934,7 @@ footer .footer-font{
         display: flex;
         flex-direction: column;
         position: absolute;
+        height: calc(100% - 80px);
         top: 0;
         left: -160px;
         z-index: 100;
@@ -1574,7 +1588,7 @@ footer .footer-font{
     
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 820px){
     .banner-p2 .girl-bottom{
         display: none
     }
@@ -1807,7 +1821,7 @@ footer .footer-font{
     z-index: 0;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 820px){
 
     .beginning{
         width: 100%;
@@ -2035,6 +2049,10 @@ footer .footer-font{
 
 
 @media screen and (max-width: 800px) {
+    header a{
+        height: 2rem;
+        margin-left: 20px;
+    }
 
     .osusume-left {
         width: 90%;
@@ -2124,7 +2142,7 @@ footer .footer-font{
     margin: 24px  0;
 
     background-color: #fff;
-    border-radius: 10%;
+    border-radius: 20px;
 }
 
 .chat p{
@@ -2226,7 +2244,7 @@ footer .footer-font{
     height: 36px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
 .chat{
     flex-direction: column-reverse;
 }
@@ -2429,7 +2447,7 @@ footer .footer-font{
     border-radius: 100%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
 .up{
     flex-direction: column-reverse;
 }
@@ -2453,7 +2471,7 @@ footer .footer-font{
 }
 
 .doll img:nth-child(4){
-    left: 371px;
+    left: 318px;
 }
 
 .doll img:nth-child(5){
@@ -2590,7 +2608,9 @@ footer .footer-font{
     margin: 55px 55px;
 }
 
-.planarea{}
+.planarea{
+    margin-bottom: 20px;
+}
 
 .planarea h2{
     margin-bottom: 24px;
@@ -2609,11 +2629,12 @@ footer .footer-font{
 
 .planarea img{
     border-radius: 20px;
+    width: 100%;
 }
 
 .donate-inf{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .donate-inf .donate-inf-le{
@@ -2743,7 +2764,7 @@ footer .footer-font{
     padding: 12px 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
     .feed {
         margin: 24px;
     }
@@ -2848,7 +2869,7 @@ footer .footer-font{
     }
 
     .planarea article{
-        width: 180px;
+        width: 100%;
     }
 
     .planarea img{
@@ -2998,7 +3019,7 @@ article .top img{
     margin-bottom: 8px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
     .hot{
     flex-direction: column-reverse;
     }
