@@ -2396,6 +2396,10 @@ footer .footer-font{
     margin: 4px 0;
 }
 
+.up .opt p:first-child{
+    height: 3ch;
+}
+
 .up .opt p:nth-child(3){
     font-weight: 600;
 }
@@ -2430,40 +2434,47 @@ footer .footer-font{
     position: absolute;
 }
 
-.doll img:nth-child(2){
+.doll #hel{
     top: 30px;
     left: 140px;
 
+    opacity: 0;
 }
 
 
-.doll img:nth-child(3){
+.doll #gla{
     top: 60px;
     left: 143px;
+
+    opacity: 0;
 }
 
-.doll img:nth-child(4){
+.doll #nose{
     top: 86px;
     left: 167px;
+
+    opacity: 0;
 }
 
-.doll img:nth-child(5){
+.doll #lolli{
     top: 160px;
     left: 177px;
+
+    opacity: 0;
 }
 
-.doll img:nth-child(6){
+.doll #hors{
     top: 238px;
     left: -3px;
 
-    display: none;
+    opacity: 0;
 }
 
-.doll img:nth-child(7){
+.doll #trun{
     top: 242px;
     left: 207px;
 
-    display: none;
+    opacity: 0;
 }
 
 .chieve {
@@ -2685,8 +2696,9 @@ footer .footer-font{
 }
 
 .donate-inf{
+    margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .donate-inf .donate-inf-le{
@@ -2704,6 +2716,10 @@ footer .footer-font{
 
 .donate-inf-le .dollar{
     display: flex;
+}
+
+.result-plan h5, .dollar h5{
+    color: #001494;
 }
 
 .count{
@@ -2819,6 +2835,11 @@ footer .footer-font{
 @media screen and (max-width: 800px) {
     .feed {
         margin: 24px;
+    }
+
+    .planarea{
+        margin: 0 12px;
+
     }
 
     .planarea div {
@@ -3075,6 +3096,19 @@ article .top img{
     margin-bottom: 8px;
 }
 
+.pborder{
+    outline: 1px solid black;
+}
+
+.no_value{
+    display: none;
+    width: 781px;
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: red;
+    text-align: center;
+}
+
 @media screen and (max-width: 800px) {
     .hot{
     flex-direction: column-reverse;
@@ -3120,6 +3154,10 @@ article .top img{
 
     .btnc button:nth-child(1){
         margin-bottom: 0;
+    }
+
+    .no_value{
+        width: auto;
     }
 
 }
