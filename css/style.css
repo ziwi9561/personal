@@ -2541,6 +2541,11 @@ footer .footer-font{
 @media screen and (max-width: 820px) {
 .up{
     flex-direction: column-reverse;
+    margin: 20px 32px;
+}
+
+.up .opt img{
+    margin: 0 auto;
 }
 
 .up .doll{
@@ -2553,21 +2558,30 @@ footer .footer-font{
     left: 260px;
 }
 
-.doll img:nth-child(2){
+.doll #hel{
     left: 288px;
 }
 
-.doll img:nth-child(3){
+.doll #gla{
     left: 293px;
 }
 
-.doll img:nth-child(4){
+.doll #nose{
     left: 318px;
 }
 
-.doll img:nth-child(5){
-    left: 372px;
+.doll #lolli{
+    left: 327px;
 }
+
+.doll #hors{
+    left: 93px;
+}
+
+.doll #trun{
+    left: 417px;
+}
+
 
 .up .gear{
     width: 100%;
@@ -2595,26 +2609,36 @@ footer .footer-font{
     width: auto;
     background-size: cover;
     margin-bottom: 20px;
+
+    overflow: hidden;
 }
 
 .doll img:nth-child(1){
-    left: 60px;
+    left: 120px;
 }
 
-.doll img:nth-child(2){
-    left: 89px;
+.doll #hel{
+    left: 149px;
 }
 
-.doll img:nth-child(3){
-    left: 93px;
+.doll #gla{
+    left: 153px;
 }
 
-.doll img:nth-child(4){
-    left: 118px;
+.doll #nose{
+    left: 178px;
 }
 
-.doll img:nth-child(5){
-    left: 126px;
+.doll #lolli{
+    left: 186px;
+}
+
+.doll #hors{
+    left: 50px;
+}
+
+.doll #trun{
+    left: 220px;
 }
 
 .up .gear{
@@ -2679,9 +2703,44 @@ footer .footer-font{
     width: 100px;
     height: 100px;
 }
-
-
 }
+
+@media screen and (max-width: 390px) {
+
+    .doll img:nth-child(1){
+    left: 102px;
+}
+
+.doll #hel{
+    left: 133px;
+}
+
+.doll #gla{
+    left: 136px;
+}
+
+.doll #nose{
+    left: 160px;
+}
+
+.doll #lolli{
+    left: 166px;
+}
+
+.doll #hors{
+    top: 264px;
+    left: 0px;
+    width: 40%;
+}
+
+.doll #trun{
+    top: 282px;
+    left: 220px;
+    width: 30%;
+}
+}
+
+
 
 /* --------------第六頁的內容(成就系統)結束-------------- */
 
