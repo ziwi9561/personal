@@ -86,13 +86,29 @@ body{}
 }
 
 /* header開始 */
-header{
+
+
+.he{
     height: 80px;
+    width: 100%;
+    max-width: 1200px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #2A2A2A;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1101;
+}
+
+.banner, .banner-p2{
+    padding-top: 80px;
+    box-sizing: border-box;
 }
 
 header a{
@@ -934,15 +950,16 @@ footer .footer-font{
         display: flex;
         flex-direction: column;
         position: absolute;
-        height: calc(100% - 80px);
+        
         top: 0;
         left: -160px;
         z-index: 100;
         margin-top: 53px;
 
         background-color: white;
-        min-width: 210px;
-        min-height: calc(100vh - 81px);
+        width: 210px;
+        height: calc(100vh - 80px);
+
     }
 
     nav li{
@@ -1950,6 +1967,14 @@ footer .footer-font{
         width: 100%;
         margin-top: 12px;
     }
+}
+
+@media screen and (max-width: 400px){
+
+    .beginning h3::after{
+        width: 53%;
+    }
+
 }
 
 @media screen and (max-width: 390px){
