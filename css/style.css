@@ -761,6 +761,8 @@ ul li:hover ul{
 .card .card-header{
     border-bottom: 1px solid #c9c9c9;
     height: 37px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card .name{}
