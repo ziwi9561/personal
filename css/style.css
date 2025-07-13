@@ -97,13 +97,6 @@ body{}
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #2A2A2A;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    z-index: 1101;
 }
 
 .banner, .banner-p2{
