@@ -2791,6 +2791,8 @@ footer .footer-font{
     display: flex;
     justify-content: space-between;
 
+    cursor: pointer;
+
 }
 
 .planarea article{
