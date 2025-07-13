@@ -676,8 +676,9 @@ ul li:hover ul{
 .osusume a{
     /* display: inline-block; */
     /* margin: 250px 0 0 90px; */
-    width: 100px;
-    height: 20px;
+    width: 120px;
+    height: 40px;
+    line-height: 20px;
     padding: 10px 20px;
     margin-left: 20px;
     text-decoration: none;
